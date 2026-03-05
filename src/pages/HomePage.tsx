@@ -5,11 +5,11 @@ import { ReviewPreview } from "../types";
 import { ReadOnlyRating } from "../components/RatingInput";
 
 const SERVICES = [
-  { id: "PonsLink", icon: "🔗", desc: "실시간 경험 공유" },
-  { id: "PonsWarp", icon: "⚡", desc: "P2P 파일 전송" },
-  { id: "Navid", icon: "🧭", desc: "내비게이션 서비스" },
-  { id: "Flucto", icon: "⬇️", desc: "미디어 다운로더" },
-  { id: "DocuFlow", icon: "📄", desc: "PDF 도구 모음" },
+  { id: "PonsLink", icon: "🔗", desc: "실시간 경험 공유", url: "https://ponslink.online" },
+  { id: "PonsWarp", icon: "⚡", desc: "P2P 파일 전송", url: "https://warp.ponslink.online" },
+  { id: "Navid", icon: "🧭", desc: "내 인생 가이드(사주)", url: "https://navid.ponslink.online" },
+  { id: "Flucto", icon: "⬇️", desc: "미디어 다운로더", url: "https://github.com/DeclanJeon/flucto/releases" },
+  { id: "DocuFlow", icon: "📄", desc: "PDF 도구 모음", url: "https://docuflow.ponslink.online" },
 ] as const;
 
 const CATEGORIES = ["전체", ...SERVICES.map((s) => s.id)] as const;
@@ -35,11 +35,11 @@ const CategoryGuide = () => (
     <h2 className="guide-title">이런 서비스들의 리뷰를 작성해보세요</h2>
     <div className="service-grid">
       {SERVICES.map((s) => (
-        <div key={s.id} className="service-card">
+        <a key={s.id} href={s.url} target="_blank" rel="noopener noreferrer" className="service-card">
           <span className="service-icon">{s.icon}</span>
           <h3 className="service-name">{s.id}</h3>
           <p className="service-desc">{s.desc}</p>
-        </div>
+        </a>
       ))}
     </div>
   </section>
