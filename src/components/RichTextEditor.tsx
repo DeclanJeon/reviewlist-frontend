@@ -37,11 +37,35 @@ export const RichTextEditor = ({ value, onChange }: RichTextEditorProps) => {
     extensions: [
       StarterKit,
       Youtube.configure({ inline: false, nocookie: true }),
-      Image.configure({ inline: false, allowBase64: true }),
+      Image.configure({ 
+        inline: false, 
+        allowBase64: true,
+        HTMLAttributes: {
+          class: 'review-image',
+        },
+      }),
     ],
     content: value,
     editorProps: {
       attributes: { class: "tiptap-editor" },
+      handlePaste: (view, event) => {
+        const clipboardData = event.clipboardData;
+        if (!clipboardData) return false;
+
+        const items = clipboardData.items;
+        for (let i = 0; i < items.length; i++) {
+          const item = items[i];
+          if (item.type.indexOf('image') !== -1) {
+            const file = item.getAsFile();
+            if (file) {
+              handleImageUpload(file);
+              return true;
+            }
+          }
+        }
+
+        return false;
+      },
     },
     onUpdate: ({ editor: activeEditor }) => {
       onChange(activeEditor.getHTML());
