@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <!-- Background rounded square -->
+  <rect width="64" height="64" rx="16" fill="#f97316"/>
+
+  <!-- Speech bubble body -->
+  <path d="M14 14 H50 Q54 14 54 18 V38 Q54 42 50 42 H36 L28 52 L28 42 H14 Q10 42 10 38 V18 Q10 14 14 14 Z" fill="white" opacity="0.95"/>
+
+  <!-- Star icon inside bubble -->
+  <path d="M32 20 L34.2 26.6 H41.2 L35.5 30.5 L37.7 37.1 L32 33.2 L26.3 37.1 L28.5 30.5 L22.8 26.6 H29.8 Z" fill="#f97316"/>
+</svg>

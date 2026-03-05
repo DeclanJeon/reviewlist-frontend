@@ -1,0 +1,23 @@
+{
+  "name": "ReviewLink",
+  "short_name": "ReviewLink",
+  "description": "진솔한 리뷰, 함께하는 대화",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f7",
+  "theme_color": "#f97316",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

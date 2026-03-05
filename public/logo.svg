@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" width="220" height="64" fill="none">
+  <!-- Icon: Orange rounded square -->
+  <rect width="64" height="64" rx="16" fill="#f97316"/>
+
+  <!-- Speech bubble body -->
+  <path d="M14 14 H50 Q54 14 54 18 V38 Q54 42 50 42 H36 L28 52 L28 42 H14 Q10 42 10 38 V18 Q10 14 14 14 Z" fill="white" opacity="0.95"/>
+
+  <!-- Star inside bubble -->
+  <path d="M32 20 L34.2 26.6 H41.2 L35.5 30.5 L37.7 37.1 L32 33.2 L26.3 37.1 L28.5 30.5 L22.8 26.6 H29.8 Z" fill="#f97316"/>
+
+  <!-- Wordmark: "Review" in dark -->
+  <text x="80" y="37" font-family="'Noto Sans KR', 'Apple SD Gothic Neo', -apple-system, sans-serif" font-size="22" font-weight="800" fill="#1a1a1a" letter-spacing="-0.5">Review</text>
+
+  <!-- Wordmark: "Link" in orange -->
+  <text x="80" y="56" font-family="'Noto Sans KR', 'Apple SD Gothic Neo', -apple-system, sans-serif" font-size="13" font-weight="600" fill="#f97316" letter-spacing="1.5">LINK</text>
+</svg>
